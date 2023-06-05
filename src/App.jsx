@@ -12,7 +12,7 @@ function App() {
   const [isFormOpen, setIsFormOpen] = useState(false)
 
   const getAllUsers = () => {
-    const URL = 'https://users-crud1.herokuapp.com/users/'
+    const URL = 'https://users-crud.academlo.tech/users/  '
     axios.get(URL)
     .then(res => setUsers(res.data))
     .catch(err => console.log(err))
@@ -46,10 +46,11 @@ function App() {
       {
         users?.map(user => (
           <CardUsers
-            key={user.id}
-            user={user}
-            getAllUsers={getAllUsers}
-            setUpdateInfo={ setUpdateInfo}
+          key={user.id}
+          user={user}
+          getAllUsers={getAllUsers}
+          setUpdateInfo={ setUpdateInfo}
+          handleOpenForm={handleOpenForm}
           />
            
         ))

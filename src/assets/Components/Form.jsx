@@ -18,7 +18,7 @@ const Form = ({ getAllUsers, updateInfo, setUpdateInfo,handleCloseForm }) => {
   }, [updateInfo]);
 
   const createUser = (data) => {
-    const URL = "https://users-crud1.herokuapp.com/users/";
+    const URL = "https://users-crud.academlo.tech/users/";
     axios
       .post(URL, data)
       .then((res) => {
@@ -29,7 +29,7 @@ const Form = ({ getAllUsers, updateInfo, setUpdateInfo,handleCloseForm }) => {
   };
 
 const updateUser = data => {
-    const URL = `https://users-crud1.herokuapp.com/users/${updateInfo.id}/`
+    const URL = `https://users-crud.academlo.tech/users/${updateInfo.id}/`
     axios.patch(URL, data)
     .then( res => {
         console.log(res.data)

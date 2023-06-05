@@ -5,7 +5,7 @@ import 'boxicons'
 const CardUsers = ({ user, getAllUsers,  setUpdateInfo }) => {
   
     const deleteUser = () => {
-        const URL= `https://users-crud1.herokuapp.com/users/${user.id}`
+        const URL= `https://users-crud.academlo.tech/users/${user.id}`
         axios.delete(URL)
         .then(res =>{
             console.log(res.data)
@@ -35,7 +35,7 @@ const CardUsers = ({ user, getAllUsers,  setUpdateInfo }) => {
       </ul>
       <footer className="card__footer">
       <button onClick={deleteUser} className="card__btn"><box-icon className='icon' name='trash' color='#ffffff' ></box-icon></button>
-      <button onClick={handleUpdateClick} className="card__btn"><box-icon name='edit' color='#ffffff' ></box-icon></button>
+      <button onClick={handleUpdateClick}  className="card__btn"><box-icon name='edit' color='#ffffff' ></box-icon></button>
       </footer>
     </article>
   );
